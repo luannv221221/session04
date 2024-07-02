@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { cartContext } from '../App'
 
 function Header() {
+    const { cartQty } = useContext(cartContext)
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -23,7 +25,7 @@ function Header() {
                         <div className="d-flex">
                             <span
                                 className="badge bg-primary"
-                            >Cart (6)</span>
+                            >Cart ({cartQty})</span>
                         </div>
                     </div>
                 </div>
